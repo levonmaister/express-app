@@ -29,10 +29,6 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
 
-    - name: "Debug: Show final tag:"
-      run: |
-          echo "Tag to be used: ${{ vars.DOCKERHUB_USERNAME }}/express-app:latest"
-
     - name: Build and push Docker image
       uses: docker/build-push-action@v6
       with:
